@@ -1,3 +1,4 @@
+package bakjoon;
 import java.util.Scanner;
 
 public class 백준19236 {

@@ -1,3 +1,4 @@
+package bakjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,6 +35,12 @@ public class 백준2573 {
 		}
 		count = 0;
 		while(true) {
+			if(dfs() == 0) {
+				count = 0;
+						break;
+			}
+				
+				
 			if(dfs() >= 2)
 				break;
 			
@@ -153,11 +160,5 @@ public class 백준2573 {
 
 	static public boolean isIn(int x, int y) {
 		return x >= 0 && x < row && y >=0 && y < col ? true : false;
-	}
-	static String aa ="5 7\r\n" + 
-			"0 0 0 0 0 0 0\r\n" + 
-			"0 2 4 5 3 0 0\r\n" + 
-			"0 3 0 2 5 2 0\r\n" + 
-			"0 7 6 2 4 0 0\r\n" + 
-			"0 0 0 0 0 0 0";
+	} 
 }
