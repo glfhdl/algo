@@ -18,7 +18,7 @@ public class 백준1026 {
 		
 		for(int i = 0; i < n; i++) {
 			a[i] = scanner.nextInt();  
-		}
+		} 
 		for(int i = 0; i < n; i++) { 
 			b[i] = scanner.nextInt();
 			
