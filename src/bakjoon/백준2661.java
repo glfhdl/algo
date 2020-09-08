@@ -10,9 +10,10 @@ public class 백준2661 {
 		Scanner scanner = new Scanner(System.in);
 		scanner = new Scanner(aa);
 		int n = scanner.nextInt();
-		
-		for(int i = 0; i < n; i++) {
-			if(i % 4 == 0)
+		int[] array = new int[n];
+		array[0] = 1;
+		for(int i = 1; i < n; i++) {
+			if(array[i] == 0)
 				System.out.print(1);
 			if(i % 4 == 1)
 				System.out.print(2);
