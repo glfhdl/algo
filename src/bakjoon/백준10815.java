@@ -52,6 +52,8 @@ public class 백준10815 {
 		System.out.println(sb.toString());
 
 	}
+	
+	 
 
 	static String aa = "5\r\n" + "6 3 2 10 -10\r\n" + "8\r\n" + "10 9 -5 2 3 4 5 -10";
 
