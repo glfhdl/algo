@@ -1,4 +1,7 @@
  
+
+package bakjoon; 
+
 import java.util.Scanner;
 
 public class 백준6603_2 {
