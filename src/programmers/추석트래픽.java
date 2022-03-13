@@ -36,7 +36,7 @@ public class 추석트래픽 {
 				double reqDateTime1 = reqDate1.getTime() - t * 1000 + 1;
 
 				System.out.println(t + ", " + reqDateTime + " , " + reqDateTime1);
-				if (Math.abs(reqDateTime - reqDateTime1) < 1000.0 || starTime1 - reqDateTime1 > 0 || (starTime1 - reqDateTime1 > 0 && ) ) {
+				if(Math.abs( reqDateTime - reqDateTime1  ) <  1000.0 || starTime1 - reqDateTime1 >= 0 || reqDateTime - reqDateTime1 >= 0) {
 
 					check++;
 				}
