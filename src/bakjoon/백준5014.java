@@ -7,68 +7,70 @@ public class 백준5014 {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		scanner = new Scanner(aa);
-
+//0650 start
 		int total = scanner.nextInt();
 		int now = scanner.nextInt();
 		int togo = scanner.nextInt();
 		int up = scanner.nextInt();
 		int down = scanner.nextInt();
-
+//10 1 10 2 1
+		
 		int count = 0;
+		boolean[] visited = new boolean[total+1];
+		
 		while (true) {
+			
+			visited[now] = true;
+			
 			if (now == togo) {
 				System.out.println(count); 
 				break;
 				
 			} 
-			
-			if(up == 0) {
-				if (now - down >= 0) { 
-					now = now - down;
-					count++;
-				//	System.out.println("down, now:" + now + " ,count:" + count);
-				}
-				else
-				{
-					System.out.println("use the stairs");
-					break;
-				}
-			}
-			
-			if(down == 0) {
-				if (now + up <= togo) {
+			 
+			if(now < togo) {
+				if(now + up > total) { 
+					now -= down;
+				}else {
 					now += up;
-					count++;
-				//	System.out.println("up, now:" + now + " ,count:" + count);
-				} else {
-					System.out.println("use the stairs");
-					break;
-					
 				}
-			}
-
-			if (now + up <= togo) {
-				now += up;
-				count++;
-			//	System.out.println("up, now:" + now + " ,count:" + count);
-			} else { 
-				if (now - down >= 0) { 
-					now = now - down;
+				
+				if(!visited[now]) {
 					count++;
-				//	System.out.println("down, now:" + now + " ,count:" + count);
-				}
-				else
-				{
+				}else {
 					System.out.println("use the stairs");
 					break;
 				}
+				
 			}
+			
+			if(now > togo) { 
+				if(now - down < 1) { 
+					now += up;
+					if(now > total) {
+						System.out.println("use the stairs");
+						break;
+					}
+				}else {
+					now -= down;
+				}
+				
+				if(!visited[now]) {
+					count++;
+				}else {
+					System.out.println("use the stairs");
+					break;
+				}
+				
+			}
+			
+	 
 
 		}
 		 
 
 	}
 
-	static String aa = "100 2 1 1 0";
+	static String aa = "100 100 1 1 100";
 
 }
